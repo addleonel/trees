@@ -87,7 +87,7 @@ const Main = () => {
 								FACULTAD DE INGENIERIA INDUSTRIAL Y SISTEMAS
 							</p>
 							<p className="portal-subtitle">
-								PROYECTO DE ALBOLIZACIÓN
+								PROYECTO DE ALBORIZACIÓN
 							</p>
 
 							<p className="portal-subtitle">
