@@ -17,7 +17,7 @@ const Header = () => {
       nb.style.boxShadow = '0px 3px 3px rgba(27, 51, 78, 0.09)';
     }else {
       let nb = document.getElementById('navbarroot-id');
-      nb.style.background = 'transparent';
+      nb.style.background = '#fff';
       nb.style.boxShadow = 'none';
     }
   }
@@ -69,16 +69,14 @@ const Header = () => {
               <img className="nav-bar__logo-image" src="https://raw.githubusercontent.com/addleonel/ghcenter/main/racingwc/src/assets/static/logo/logo.png"alt=""/>
                  <span className="nav-bar__logo-text">Proyecto de Arbolización</span>
             </a>
-            <button className="nav-bar__button-item nav-bar__buttons-item--subscribe nav-bar__buttons-item--subscribe-responsive" onClick={() => window.location.href = contactURL}>Contactar</button>
-            
+             
             <div className="nav-bar__display" id="nav-bar__display-id" onClick={ displayResponsive }>
-                <img className="nav-bar__display-icon" src="https://raw.githubusercontent.com/addleonel/ghcenter/54f5659d530c66111fa5cdc205e07501bb5dee14/racingwc/src/assets/static/icons/bars.svg" alt=""/> 
+                <img className="nav-bar__display-icon" src="https://raw.githubusercontent.com/addleonel/trees/main/src/assets/static/icons/bars.svg" alt=""/> 
             </div>
             
             <div className="nav-bar__buttons">
             <Link className="nav-bar__buttons-item nav-bar__buttons-item--business"  to="/plant/">Plantación y Riego</Link>
             <Link className="nav-bar__buttons-item nav-bar__buttons-item--business"  to="/info/">información</Link>
-              <Link className="nav-bar__buttons-item nav-bar__buttons-item--business"  to="/products/">Productos</Link>
               <Link className="nav-bar__buttons-item nav-bar__buttons-item--business"  to="/about/">Sobre nosotros</Link>                                                                                                     
             </div>
         </Container>         
@@ -103,8 +101,8 @@ const Header = () => {
         </div>
       <section id="nav-bar__responsive" className="nav-bar__responsive--none"  onClick={ disableMenu }>
         <ul id="nav-bar__responsive-list-id" className="nav-bar__responsive-list" onClick={ enableMenu }>
+        <li className="nav-bar__responsive-li" ><Link id="about-res"  onClick={ disableMenu } className="nav-bar__responsive-item" to="/about/">Plantación y Riego</Link></li>
             <li className="nav-bar__responsive-li" ><Link id="about-res"  onClick={ disableMenu } className="nav-bar__responsive-item" to="/about/">Sobre Nosotros</Link></li>
-            <li className="nav-bar__responsive-li" ><Link id="contact-res" className="nav-bar__responsive-item" to="/contact/" onClick={() => window.location.href = contactURL}>Contacto</Link></li>
             <li className="nav-bar__responsive-li" ><Link id="products-res"  onClick={ disableMenu } className="nav-bar__responsive-item" to="/products/">Productos</Link></li>
         </ul>                                                       
       </section>

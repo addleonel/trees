@@ -1,29 +1,54 @@
 import * as React from "react";
-import "../assets/styles/Footer.scss";
-import { Container } from "react-bootstrap";
-import "../assets/styles/About.scss";
+import { Container,
+    Tab, 
+    Row, 
+    Nav, 
+    Col,
 
+} from "react-bootstrap";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "../assets/styles/Main.scss";
+import ProductItem from "./ProductItem";
+import { HashLink } from "react-router-hash-link";
+import {llantas,
+} from "../productsList.js";
+const Products = () => {
+    const listLlantas =  llantas.map((link) =>{
+        return( 
+            <React.Fragment>
+                <ProductItem 
+                    key={link.id}
+                    image={link.image}
+                    in_="in-products"
+                />
+            </React.Fragment>
+        )
+    });
 
-
-
-const About = () => {
-  return (
+    return (
     <React.Fragment>
-        <Container>
-            <div className="about-content">
-                <div className="about-content-text">
-                    <h1>Sobre Nosotros</h1>
-                 
+        <section className="section-p section-1">
+            <Container fluid="xxl">
+                <div className="portal-phrase">
+                    <h1 className="portal-title">
+                        Sobre Nosotros
+                    </h1>
+                    <p className="portal-subtitle">
+                    Somos alumnos de Escuela Profesional de Ingeniería Industrial de la Universidad Nacional “Hermilio Valdizan”, que tiene como finalidad realizar un programa social con el proyecto de arborización en la comunidad de Libertadores de Pichipampa distrito de Pillco Marca Provincia y Departamento de Huánuco
                     
-                    <p>
-                    Somos alumnos de Escuela Profesional de Ingeniería Industrial de la Universidad Nacional “Hermilio Valdizan”, que tiene como finalidad realizar un programa social con el proyecto de arborización
                     </p>
-                  <img src="" alt="" />
                 </div>
-            </div>
+            </Container>
+        </section>
+   
+        <Container fluid="xxl" >
+        <div className="products">   
+            {listLlantas}
+        </div>
+         
         </Container>
     </React.Fragment>
   );
 }
 
-export default About;
+export default Products;

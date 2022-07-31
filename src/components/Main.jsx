@@ -15,7 +15,7 @@ import { llantas,
 const Main = () => {
 	const contactURL = buttonURL;
 	const [showp, setShowp] = useState(5);
-	const bakground = "https://www.wikihow.com/images/thumb/9/9c/Grow-Pine-Trees-Step-1-Version-6.jpg/v4-728px-Grow-Pine-Trees-Step-1-Version-6.jpg.webp"
+	const bakground = "https://raw.githubusercontent.com/addleonel/trees/main/src/assets/static/products/t1.jpeg";
 	const sliderState = {
 		dots: false,
 		infinite: true,
@@ -71,22 +71,6 @@ const Main = () => {
 		});
 	}, []);
 
-	const listLlantas =  llantas.slice(0, 7).map((link) =>{
-        return( 
-            <React.Fragment>
-				<div>
-					<ProductItem 
-						key={link.id}
-						name={link.name}
-						image={link.image}
-						price={link.price}
-						mark={link.mark}
-						in_=""
-					/>
-				</div>
-            </React.Fragment>
-        )
-    });
 
 	return (
 		<React.Fragment>
@@ -94,9 +78,7 @@ const Main = () => {
 				style={{backgroundImage: `url(${bakground})`, backgroundSize: "cover", backgroundPosition: "center"}}
 			>
 				<Container>
-					<div className="section-1-content" 
-						
-					>
+					<div className="section-1-content">
 						<div className="portal-phrase">
 							<h1 className="portal-title">
 								UNIVERSIDAD NACIONAL HERMILIO VALDIZAN
@@ -107,19 +89,38 @@ const Main = () => {
 							<p className="portal-subtitle">
 								PROYECTO DE ALBOLIZACIÓN
 							</p>
+
+							<p className="portal-subtitle">
+								CURSO: DERECHO EMPRESARIAL
+							</p>
+							<p className="portal-subtitle">
+								DOCENTE: ING. Pedro Villavicencio Guardia
+							</p>
 						</div>
-					
 					</div>
 				</Container>
 			</section>
 			<section className="section-m section-2">
 				<Container fluid="xxl">
-					
 					<div className="c-container">
-						<Slider {...sliderState}>
-							{listLlantas}
-						</Slider>
-						
+						<div style={
+							{
+								position: "absolute",
+								marginTop: "30px",
+								marginLeft: "40px",
+							}
+						}>
+							<h2>INTEGRANTES:</h2>
+							<p style={{fontSize:"20px", fontWeight:"bold"}}>Alvarado Vicente Edgar Franco</p>
+							<p style={{fontSize:"20px", fontWeight:"bold"}}>Huacho Tacuchi Levi</p>
+							<p style={{fontSize:"20px", fontWeight:"bold"}}>Ramirez Anaya Arol</p>
+							<p style={{fontSize:"20px", fontWeight:"bold"}}>Aguirre Obregon Yosep</p>
+						</div>
+						<img 
+							style={{width: "100%", height: "auto"}}
+						src="https://raw.githubusercontent.com/addleonel/trees/main/src/assets/static/products/t5.jpeg" alt="" />
+							
+					
 					</div>
 				</Container>
 			</section>
