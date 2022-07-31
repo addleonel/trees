@@ -30,10 +30,28 @@ const ProductItem= (props) => {
     return (
         <React.Fragment>
             <div className={class_}>
+                <Button 
+                style={{backgroundColor: "transparent", border: "none"}}
+                variant="primary" onClick={handleShow}>
                 <div className="c-image">
                     <img src={props.image} width="300px" alt="" />
                 </div>
+                </Button>
             </div>
+
+
+            <Modal show={show} onHide={handleClose} size="lg" centered  style={{ borderRadius: "10px !important",}}>
+                    <Modal.Header closeButton>
+                
+                    </Modal.Header>
+                    <Modal.Body >
+                        <div className="content-modal-elements">
+                            <img className="modal-image" src={props.image} width="250px" alt="" />
+                        </div>
+                       
+                    </Modal.Body>
+                    
+                </Modal>
         </React.Fragment>
     );
 }
