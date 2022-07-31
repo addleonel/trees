@@ -67,7 +67,7 @@ const Header = () => {
         <Container fluid="xxl" className="nav-bar"> 
             <a className="nav-bar__logo" href="/">
               <img className="nav-bar__logo-image" src="https://raw.githubusercontent.com/addleonel/trees/main/public/logo.jpeg"alt=""/>
-                 <span className="nav-bar__logo-text">Proyecto de Arbolización</span>
+                 <span className="nav-bar__logo-text">Proyecto de Arborización</span>
             </a>
              
             <div className="nav-bar__display" id="nav-bar__display-id" onClick={ displayResponsive }>
